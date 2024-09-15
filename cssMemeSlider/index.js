@@ -8,8 +8,6 @@ const memesArr = [
 let selects = document.getElementsByClassName('select');
 let image = document.getElementById('image');
 let description = document.getElementById('description');
-const sliderContainer = document.querySelector('.slider-container');
-
 
 function handleSelect(event) {
 	var index = event.currentTarget.getAttribute('data-index');
@@ -26,8 +24,6 @@ function handleSelect(event) {
 	// Добавляем класс 'select-outline' только к кликнутому элементу
 	event.currentTarget.classList.add('circle-outline');
     event.currentTarget.classList.remove('circle');
-
-    // sliderContainer.style.transform = `translateX(${index * 100}%)`;
     image.src = memesArr[index].img;
 }
 
